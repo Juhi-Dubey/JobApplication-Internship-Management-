@@ -1,12 +1,14 @@
 import axios from "axios";
 
 const API = axios.create({
-  // baseURL: "https://jobapplication-internship-management.onrender.com",
-  baseURL: import.meta.env.VITE_API_URL,
+  baseURL: "https://jobapplication-internship-management.onrender.com",
+  // baseURL: import.meta.env.VITE_API_URL,
   headers: {
     "Content-Type": "application/json",
   },
 });
+
+console.log(import.meta.env.VITE_API_URL);
 
 // Interceptor to add auth token to headers
 API.interceptors.request.use(
