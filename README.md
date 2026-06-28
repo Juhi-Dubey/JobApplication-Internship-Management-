@@ -1,43 +1,50 @@
-# Job Application & Internship Management System
+# 💼 CareerHub - Job Application & Internship Management System
 
-A full-stack MERN application that enables organizations to post jobs and internships while allowing applicants to browse opportunities, apply online, and track application status.
+A full-stack MERN web application that enables applicants to discover jobs and internships, apply online, and track their application status while providing administrators with a powerful dashboard to manage job postings and applications.
 
-## Live Features
+## 🚀 Live Demo
 
-### Authentication
+**Frontend:** https://job-application-internship-manageme.vercel.app/
 
-* User Registration
-* User Login
-* JWT Authentication
-* Password Encryption using bcrypt
-* Protected Routes
-* Role-Based Access Control (Admin/User)
-
-### Applicant Features
-
-* Browse Available Jobs & Internships
-* View Job Details
-* Apply for Jobs
-* Submit Resume Link and Cover Note
-* Track Application Status
-* View Application History Dashboard
-
-### Admin Features
-
-* Create Job Postings
-* Update Job Postings
-* Delete Job Postings
-* View All Applications
-* Manage Applicant Status
-* Administrative Dashboard
-
-### Application Workflow
-
-Applied → Shortlisted → Selected / Rejected
+**Backend API:** https://jobapplication-internship-management.onrender.com
 
 ---
 
-## Tech Stack
+## ✨ Features
+
+### 👨‍🎓 Applicant
+
+* User Registration & Login
+* Secure JWT Authentication
+* Browse Jobs & Internships
+* View Job Details
+* Apply for Jobs
+* Track Application Status
+* User Dashboard
+* Responsive UI
+
+### 👨‍💼 Admin
+
+* Admin Authentication
+* Create Job Listings
+* Update Job Listings
+* Delete Job Listings
+* View All Applications
+* Update Application Status
+* Admin Dashboard
+
+### 🔒 Security
+
+* JWT Authentication
+* Password Hashing using bcrypt
+* Role-Based Authorization
+* Protected Routes
+* Email Validation
+* Strong Password Validation
+
+---
+
+## 🛠 Tech Stack
 
 ### Frontend
 
@@ -45,13 +52,14 @@ Applied → Shortlisted → Selected / Rejected
 * React Router DOM
 * Axios
 * Context API
-* CSS
+* CSS3
+* React Icons
 
 ### Backend
 
 * Node.js
 * Express.js
-* JWT Authentication
+* JWT
 * bcryptjs
 
 ### Database
@@ -61,24 +69,24 @@ Applied → Shortlisted → Selected / Rejected
 
 ### Deployment
 
-* Vercel (Frontend)
-* Render (Backend)
+* Vercel
+* Render
 
 ---
 
-## Project Structure
+## 📁 Project Structure
 
 ```text
-JobApplicationInternshipManagement/
-
+JobApplication-Internship-Management/
+│
 ├── backend/
 │   ├── config/
 │   ├── controllers/
 │   ├── middleware/
 │   ├── models/
 │   ├── routes/
-│   ├── server.js
-│   └── package.json
+│   ├── package.json
+│   └── server.js
 │
 ├── frontend/
 │   ├── src/
@@ -88,7 +96,6 @@ JobApplicationInternshipManagement/
 │   │   ├── services/
 │   │   ├── App.jsx
 │   │   └── main.jsx
-│   │
 │   └── package.json
 │
 └── README.md
@@ -96,38 +103,46 @@ JobApplicationInternshipManagement/
 
 ---
 
-## API Endpoints
+## 📌 API Endpoints
 
 ### Authentication
 
-| Method | Endpoint         | Description   |
-| ------ | ---------------- | ------------- |
-| POST   | /api/auth/signup | Register User |
-| POST   | /api/auth/login  | Login User    |
+| Method | Endpoint           |
+| ------ | ------------------ |
+| POST   | `/api/auth/signup` |
+| POST   | `/api/auth/login`  |
 
 ### Jobs
 
-| Method | Endpoint      | Description        |
-| ------ | ------------- | ------------------ |
-| GET    | /api/jobs     | Get All Jobs       |
-| POST   | /api/jobs     | Create Job (Admin) |
-| PUT    | /api/jobs/:id | Update Job (Admin) |
-| DELETE | /api/jobs/:id | Delete Job (Admin) |
+| Method | Endpoint        |
+| ------ | --------------- |
+| GET    | `/api/jobs`     |
+| POST   | `/api/jobs`     |
+| PUT    | `/api/jobs/:id` |
+| DELETE | `/api/jobs/:id` |
 
 ### Applications
 
-| Method | Endpoint                     | Description              |
-| ------ | ---------------------------- | ------------------------ |
-| POST   | /api/applications            | Apply for Job            |
-| GET    | /api/applications/me         | User Applications        |
-| GET    | /api/applications            | All Applications (Admin) |
-| PUT    | /api/applications/:id/status | Update Status (Admin)    |
+| Method | Endpoint                       |
+| ------ | ------------------------------ |
+| POST   | `/api/applications`            |
+| GET    | `/api/applications/me`         |
+| GET    | `/api/applications`            |
+| PUT    | `/api/applications/:id/status` |
 
 ---
 
-## Installation
+## ⚙️ Installation
 
-### Backend Setup
+### Clone Repository
+
+```bash
+git clone https://github.com/Juhi-Dubey/JobApplication-Internship-Management.git
+
+cd JobApplication-Internship-Management
+```
+
+### Backend
 
 ```bash
 cd backend
@@ -137,7 +152,7 @@ npm install
 npm run dev
 ```
 
-### Frontend Setup
+### Frontend
 
 ```bash
 cd frontend
@@ -149,56 +164,76 @@ npm run dev
 
 ---
 
-## Environment Variables
+## 🔑 Environment Variables
 
-Create a `.env` file inside the backend folder:
+Create a `.env` file inside the **backend** folder.
 
 ```env
 PORT=5000
 
-MONGO_URI=your_mongodb_connection_string
+MONGO_URI=YOUR_MONGODB_URI
 
-JWT_SECRET=your_jwt_secret
+JWT_SECRET=YOUR_SECRET_KEY
 ```
 
 ---
 
-## Future Improvements
+## 📸 Screenshots
 
-* Resume Upload using Cloudinary
-* Email Notifications
-* Advanced Search Filters
-* Analytics Dashboard
-* Application Export to CSV
-* Company Profiles
-
----
-
-## Screenshots
-
-Add screenshots of:
+Create a folder named **screenshots** in the root directory and add:
 
 * Landing Page
 * Login Page
 * Signup Page
 * Jobs Page
-* Job Details Page
+* Job Details
 * User Dashboard
 * Admin Dashboard
 * Application Management
 
+Example:
+
+```md
+![Landing](./screenshots/landing-page.png)
+
+![Jobs](./screenshots/jobs-page.png)
+
+![Admin Dashboard](./screenshots/admin-dashboard.png)
+```
+
 ---
 
-## Developer
+## 📚 Learning Outcomes
+
+Through this project, I gained practical experience in full-stack web development using the MERN stack. Some of the key concepts I learned include:
+
+* Building RESTful APIs using Node.js and Express.js.
+* Designing and managing MongoDB databases with Mongoose.
+* Implementing JWT-based authentication and role-based authorization.
+* Securing user passwords using bcrypt hashing.
+* Creating reusable React components and managing application state with Context API.
+* Implementing protected routes for authenticated users.
+* Performing CRUD operations for jobs and applications.
+* Integrating frontend and backend using Axios.
+* Handling form validation, error handling, and user-friendly feedback.
+* Deploying a full-stack application using Vercel and Render.
+* Using Git and GitHub for version control and project management.
+* Structuring a scalable MERN application using a modular architecture.
+
+This project strengthened my understanding of building secure, responsive, and production-ready web applications while following best practices in full-stack development.
+
+---
+
+## 👩‍💻 Developer
 
 **Juhi Dubey**
 
-BCA Student | MERN Stack Developer
-
-GitHub: https://github.com/Juhi-Dubey
+* BCA Student
+* MERN Stack Developer
+* GitHub: https://github.com/Juhi-Dubey
 
 ---
 
-## License
+## 📄 License
 
-This project is developed for educational and internship evaluation purposes.
+This project is developed for educational and internship purposes.
