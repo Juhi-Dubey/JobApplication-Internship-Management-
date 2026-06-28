@@ -180,28 +180,50 @@ JWT_SECRET=YOUR_SECRET_KEY
 
 ## 📸 Screenshots
 
-Create a folder named **screenshots** in the root directory and add:
+### 🏠 Landing Page
 
-* Landing Page
-* Login Page
-* Signup Page
-* Jobs Page
-* Job Details
-* User Dashboard
-* Admin Dashboard
-* Application Management
+![Landing Page](./Screenshots/Home1.png)
+(./Screenshots/Home2.png)
 
-Example:
+### 🔐 Login Page
 
-```md
-![Landing](./screenshots/landing-page.png)
+![Login Page](./Screenshots/Login.png)
 
-![Jobs](./screenshots/jobs-page.png)
+### 📝 Signup Page
 
-![Admin Dashboard](./screenshots/admin-dashboard.png)
-```
+![Signup Page](./Screenshots/Signup.png)
+
+### 💼 Jobs Page
+
+![Jobs Page](./Screenshots/JobPage.png)
+
+### 📄 Job Details
+
+![Job Details](./Screenshots/JobDetails.png)
+
+### 📋 Post Job / Internship
+
+![Post Job or Internship](./Screenshots/PostJobOrInternship.png)
+
+### 👤 User Dashboard
+
+![User Dashboard](./Screenshots/UserDashboard1.png)
+
+### 👤 User Dashboard (Applications)
+
+![User Dashboard Applications](./Screenshots/UserDashboard2.png)
+
+### 🛠️ Admin Dashboard
+
+![Admin Dashboard](./Screenshots/AdminDashboard1.png)
+
+### Application Management
+
+![Application Management](./Screenshots/ApplicationManagement.png)
+
 
 ---
+
 
 ## 📚 Learning Outcomes
 
