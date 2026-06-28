@@ -183,7 +183,8 @@ JWT_SECRET=YOUR_SECRET_KEY
 ### 🏠 Landing Page
 
 ![Landing Page](./Screenshots/Home1.png)
-(./Screenshots/Home2.png)
+
+![Landing Page](./Screenshots/Home2.png)
 
 ### 🔐 Login Page
 
