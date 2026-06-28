@@ -7,6 +7,28 @@ exports.signup = async (req, res) => {
   try {
     const { name, email, password } = req.body;
 
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$!%*?&])[A-Za-z\d@#$!%*?&]{8,}$/;
+
+    if (!name || !email || !password){
+      return res.status(400).json({
+        message: "All fields are required",
+      });
+    }
+
+    if(!emailRegex.test(email)){
+      return res.status(400).json({
+        message: "Invalid email format",
+      });
+    }
+
+    if(!passwordRegex.test(password)){
+      return res.status(400).json({
+        message: "Password must be at least 8 characters long and include uppercase, lowercase, number, and special character.",
+      });
+    }
+
+
     const existingUser = await User.findOne({
       email,
     });
@@ -50,6 +72,21 @@ exports.login = async (req, res) => {
   try {
     const { email, password } = req.body;
 
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if(!email || !password){
+      return res.status(400).json({
+        message: "Email and password are required",
+      });
+    }
+
+    if(!emailRegex.test(email)) {
+      return res.status(400).json({
+        message: "Invalid email format",
+      });
+    }
+
+    
     const user = await User.findOne({
       email,
     });

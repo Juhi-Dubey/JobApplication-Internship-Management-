@@ -1548,3 +1548,26 @@ h2 {
     gap: 12px;
   }
 }
+
+
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper .form-input {
+  padding-right: 45px;
+}
+
+.password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #888;
+  font-size: 18px;
+}
+
+.password-toggle:hover {
+  color: #7c5cff;
+}

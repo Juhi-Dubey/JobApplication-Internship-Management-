@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 
+
+
 const Landing = () => {
   const { isAuthenticated, user } = useAuth();
 
@@ -68,9 +70,16 @@ const Landing = () => {
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
               </svg>
             </div>
-            <h3>1. Create an Account</h3>
-            <p>Sign up securely as an applicant or setup your profile to search and get personalized recommendations.</p>
-          </div>
+            <h3>
+              {!isAuthenticated ? "1. Create an Account" : "1. Welcome Back"}
+            </h3>
+
+            <p>
+              {!isAuthenticated
+                ? "Sign up securely as an applicant and get personalized recommendations."
+                : "Continue exploring jobs and managing your applications."}
+            </p>   
+        </div>
           <div className="feature-card">
             <div className="feature-icon-wrapper">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" className="feature-icon">
@@ -94,15 +103,42 @@ const Landing = () => {
         </div>
       </section>
 
-      {/* Call to Action Section */}
       <section className="cta-section">
-        <div className="cta-content">
-          <h2>Ready to Take the Next Step?</h2>
-          <p>Create an account today and connect with potential employers or list openings now.</p>
-          <Link to="/signup" className="btn btn-light btn-lg">
-            Create Free Account
-          </Link>
-        </div>
+        {!user ? (
+          <>
+            <h2>Ready to Take the Next Step?</h2>
+            <p>
+              Create an account today and connect with potential employers or list
+              openings now.
+            </p>
+
+            <Link to="/signup" className="btn btn-light">
+              Create Free Account
+            </Link>
+          </>
+        ) : user.role === "admin" ? (
+          <>
+            <h2>Manage Your Recruitment</h2>
+            <p>
+              Create job postings, review applications, and manage your hiring process.
+            </p>
+
+            <Link to="/admin" className="btn btn-light">
+              Go to Admin Dashboard
+            </Link>
+          </>
+        ) : (
+          <>
+            <h2>Ready to Apply for Your Dream Job?</h2>
+            <p>
+              Explore the latest opportunities and track all your applications in one place.
+            </p>
+
+            <Link to="/jobs" className="btn btn-light">
+              Explore Jobs
+            </Link>
+          </>
+        )}
       </section>
     </div>
   );
